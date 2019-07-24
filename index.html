@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bootstrap portfolio</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<script type="text/javascript" src="bootstrap/jquery3.3.1.js"></script>
+		<script type="text/javascript" src="bootstrap/popper.min.js"></script>
+	<script type="text/javascript" src="bootstrap/bootstrap.min.js"></script>
+<!-- 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+ -->
+</head>
+<style>
+	body
+	{
+		background-color: #F7F7F8;
+	}
+	#Header a:hover
+	{
+		color: #fff;
+	}
+	#bg-img
+	{
+		/*width: 100%;*/
+		background-image:url('code7.jpg');
+		background-size:cover;
+		background-repeat:no-repeat;
+		background-attachment: fixed;
+		min-height: 500px;
+		animation: anim 10s infinite;
+
+		}
+
+		@keyframes anim{
+			25%{
+				background-image: url('code2.jpg');
+				background-attachment: fixed;
+
+			}
+
+			50%{
+				background-image: url('code3.jpg');
+				background-attachment: fixed;
+				
+			}
+
+			75%{
+				background-image: url('code1.jpg');
+				background-attachment: fixed;
+
+				
+			}
+			100%{
+				background-image: url('code5.jpg');
+				background-attachment: fixed;
+
+			}
+		}
+		
+		#bg-img:hover{
+				background-image: url('code2.jpg');
+				animation: ani 0s infinite;
+			}
+			@keyframes ani{
+				from{
+					background-image: url('code2.jpg');
+				background-attachment: fixed;
+				}
+				to{
+					background-image: url('code2.jpg');
+				background-attachment: fixed;
+				}
+			}
+		
+	/*#inside{
+		width: 100%;
+		height: 500px;
+		background:black;
+		opacity: 0.6;
+    filter: alpha(opacity=50);
+	}*/
+	
+	#About
+	{
+		/*margin-top: -200px;*/
+	}
+	#About span
+	{
+		padding:10px 20px 10px 20px;
+
+	}
+	#About hr
+	{
+		border-width: 2px;
+		margin-top: 07px;
+	}
+	
+	#skills span
+	{
+		padding:10px 20px 10px 20px;
+
+	}
+	#skills hr
+	{
+		border-width: 2px;
+		margin-top: 07px;
+	}
+	#experience span
+	{
+		padding:10px 20px 10px 20px;
+
+	}
+	#experience hr
+	{
+		border-width: 2px;
+		margin-top: 07px;
+	}
+	#experience .card
+	{
+		border-top:5px solid #343A40;
+	}
+	#Contact span
+	{
+		padding:10px 20px 10px 20px;
+
+	}
+	#Contact hr
+	{
+		border-width: 2px;
+		margin-top: 07px;
+	}
+	/*#Contact .card
+	{
+		border-top:5px solid #343A40;
+	}*/
+	.media img{
+		border-radius: 5%;
+		transition: 4s;
+		border:solid 5px #F7F7F8;
+		
+
+		
+	}
+	.media img:hover{
+		border-radius:50%;
+		transition:4s;
+		background:url('bac.jpg');
+		transform: rotateY(360deg)  rotateZ(360deg) rotate(360deg) rotateX(360deg);
+		border: solid 5px #DC3545;
+	
+	}
+	.fa-facebook{
+		color: white;
+	}
+	.fa-twitter{
+		color: white;	
+	}
+	.fa-instagram{
+		color: white;
+	}
+
+	.fa-facebook:hover{
+		color: #007BFF;
+	}
+	.fa-twitter:hover{
+		color: #007BFF;	
+	}
+	.fa-instagram:hover{
+		color: #007BFF;
+	}
+::-webkit-scrollbar{
+		background-color:transparent;
+		width: 8px;
+		
+}
+::-webkit-scrollbar-track{
+	box-shadow: inset 0 0 2.5px 2px rgba(0,0,0,0.5);
+	border-radius: 50px;
+	border: 7px  solid #232943;
+
+}
+::-webkit-scrollbar-thumb{
+	box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color:#007BFF;
+	border-radius: 50px;
+
+}
+
+</style>
+<body data-spy="scroll" data-target=".navbar" >
+									<!----------Navbar----------->
+
+		
+			<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+				<div class="container">
+					<button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<a href="#" class="navbar-brand"><h3 class="text-center mb-1 ">OLAWOYIN OLAMIDE's &nbsp; PORTFOLIO</h3></a>
+				
+				<div  class="collapse navbar-collapse" id="navbarCollapse" >
+					<ul class="navbar-nav ml-auto">
+						<a href="#About"  class=" nav-item nav-link">About&nbsp;Me</a>
+						<a href="#Skills" class=" nav-item nav-link">Skills</a>
+						<a href="#experience" class=" nav-item nav-link">Experience</a>
+						<a href="#Contact" class=" nav-item nav-link">Contact</a>
+					</ul>
+				</div>
+				</div>
+			</nav>
+		
+		<!-------Showcase---------->
+		<div id="bg-img"> </div>
+
+		<!----about me----->
+		<div id="About">
+			<div class="container" >
+				<div class="row">
+					<div class="col">
+						<div id="AboutData">
+							<div class="card bg-white"  style="/*margin-top:-10%;*/ box-shadow: 0px -0px 3px #A0A0A0">
+								<div class="card-title my-5">
+									<div class="media">
+										<img src="olamide.jpg" width="250" height="250" class="img-fluid  mx-5 d-none d-lg-block">
+										<div class="media-body">
+											<h3 class="display-4 ml-4">I'm Olawoyin Olamide</h3>
+											<p class="text-muted ml-4">Programmer & Blogger / CEO of Mp3vibes.net</p>
+											<div class="container">
+												<table class="table table responsive ">
+													<tr>
+														<td class="text-muted">Age</td>
+														<td>-</td>
+														<td>18 Years Old</td>
+													</tr>
+													<tr>
+														<td class="text-muted">Email</td>
+														<td>-</td>
+														<td>Olawoyin206@gmail.com</td>
+													</tr>
+													<tr>
+														<td class="text-muted">Website</td>
+														<td>-</td>
+														<td><a href="https:mp3vibes.net">Mp3vibes.net</a> / <a href="https:naijmedia.com">Naijmedia.com</a></td>
+													</tr>
+													<tr>
+														<td class="text-muted">Phone</td>
+														<td>-</td>
+														<td>+234 -  9060492873</td>
+													</tr>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="card-footer bg-dark">
+									<a href="https://facebook.com/mp3vibesdotnet"><i  class="fa fa-facebook fa-2x mx-3 "></i></a>
+									<a href="https://twitter.com/awesome206"><i  class="fa fa-twitter fa-2x mx-3 "></i></a>
+									<a href="https://instagram.com/mp3vibes_media"><i  class="fa fa-instagram fa-2x mx-3"></i></a>
+								
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- <div id="Abouts" class="container mt-5">
+				<div class="row">
+					<div class="col">
+						<span class="bg-dark text-white">About Me</span><hr class="bg-dark">
+						<p class="lead text-justify pl-3 bg-white">My Name is OLAWOYIN OLAMIDE IFEOLUWA am a Pragrammer, a blogger and a student of SQI COLLEGE OF ICT.
+						I live in Ikoyi-ile Oyo state</p>
+					</div>
+				</div>
+			</div> -->
+
+						<!-- <!.................skills..........> -->
+
+			<div id="Skills" class="mt-5">
+				<div class="container">
+					<span class="bg-dark text-white">My Skills</span><hr class="bg-dark">
+					<div class="row">
+						<div class="col">
+							<div class="card bg-white"  style="padding-bottom: 20px;">
+								 <h3 class="ml-3 my-3">HTML5 Language</h3>
+								 <div class="progress mx-3" style="height:50%;">
+								 	<div class="progress-bar bg-success text-right" style="width: 92%; font-size:15px;">92%</div>
+								 </div>
+
+								  <h3 class="ml-3 my-3">CSS Language</h3>
+								 <div class="progress mx-3" style="height:50%;">
+								 	<div class="progress-bar bg-success text-right" style="width: 98%; font-size:15px;">98%</div>
+								 </div>
+
+								  <h3 class="ml-3 my-3">Bootstrap Css</h3>
+								 <div class="progress mx-3" style="height:50%;">
+								 	<div class="progress-bar bg-success text-right" style="width: 65%; font-size:15px;">65%</div>
+								 </div>
+
+								  <h3 class="ml-3 my-3">Javascript js</h3>
+								 <div class="progress mx-3" style="height:50%;">
+								 	<div class="progress-bar bg-success text-right" style="width: 87%; font-size:15px;">87%</div>
+								 </div>
+
+								  <h3 class="ml-3 my-3">Jquery js</h3>
+								 <div class="progress mx-3" style="height:50%;">
+								 	<div class="progress-bar bg-success text-right" style="width: 78%; font-size:15px;">78%</div>
+								 </div>
+								  <h3 class="ml-3 my-3">Angular Js</h3>
+								 <div class="progress mx-3" style="height:50%;">
+								 	<div class="progress-bar bg-danger text-right " style="width: 36%; font-size:15px;">36%</div>
+								 </div>
+								 <h3 class="ml-3 my-3">GIT</h3>
+								 <div class="progress mx-3" style="height:50%;">
+								 	<div class="progress-bar bg-success text-right " style="width: 51%; font-size:15px;">51%</div>
+								 </div>
+								 <h3 class="ml-3 my-3">CMS</h3>
+								 <div class="progress mx-3" style="height:50%;">
+								 	<div class="progress-bar bg-success text-right " style="width: 99%; font-size:15px;">99%</div>
+								 </div>
+								 
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+		<!---Experience---->
+
+			<div id="experience" >
+				<div class="container mt-5">
+							<span class="bg-dark text-white">Experience</span><hr class="bg-dark">
+					<div class="row">
+						<div class="col-lg-6 mt-3">
+								<div class=" card bg-white">	
+										<img src="sqiimage.png" width="100"  class="img-fluid my-3 d-flex m-auto py-5">
+										<h2 class="text-center text-primary pb-5">I study at SQI College Of ICT</h2>
+										
+								</div>
+
+							
+						</div>
+
+						<div class="col-lg-6 mt-3">
+								<div class=" card bg-white">	
+										<img src="mp3.png" width="118"  class="img-fluid my-3 d-flex m-auto py-5">
+										<h2 class="text-center text-primary pb-5">I'm the CEO Of Mp3vibes media</h2>
+										
+								</div>
+
+							
+						</div>
+
+						<div class="col-lg-6 mt-5">
+								<div class=" card bg-white">	
+										<img src="wordpress.png" width="100"  class="img-fluid my-3 d-flex m-auto py-5">
+										<h2 class="text-center text-primary pb-5">I Design Wordpress Websites</h2>
+										
+								</div>
+
+							
+						</div>
+
+						<div class="col-lg-6 mt-5">
+								<div class=" card bg-white">	
+										<img src="fireworks.png" width="100"  class="img-fluid my-3 d-flex m-auto py-5">
+										<h2 class="text-center text-primary pb-5">I Know little About Adobe Fireworks</h2>
+										
+								</div>
+
+							
+						</div>
+
+
+
+					</div>
+
+				</div>
+			</div>
+
+			<!----Contact---------->
+			<div id="Contact">
+				<div class="container mt-5 mb-3">
+					<span class="bg-dark text-white">Contact Me</span><hr class="bg-dark">
+					<div class="row">
+						<div class="col">
+							<div class="card bg-white">
+								<div class="card-header">
+									<h4 class="my-4">Contact Me Below</h4>
+
+										<div class="form-group pb-3">
+											<input type="text" placeholder="User Name" name="" class="form-control ">	
+										</div>
+
+										<div class="form-group pb-3">
+											<input type="text" placeholder="Email" name="" class="form-control ">	
+										</div>
+
+										<div class="form-group pb-3">
+											<textarea class="form-control" placeholder="Write Something Here...................."></textarea>
+										</div>
+
+										<div class="form-group pb-3 ">
+											<button class="btn btn-primary text-white">Submit Now</button>
+										</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!------Footer----->
+			<div class="container-fluid bg-dark">
+				<div class="row">
+					<div class="col">
+						<div class="container">
+							<p class="text-white pt-3 text-center">Portfolio Website Designed By: <a href="https://facebook.com/Olawoyin+olamide+ifeoluwa"><B class="text-info">OLAWOYIN OLAMIDE IFEOLUWA</B></a> in 24-07-2019</p>
+							<div class="card-footer bg-dark text-center">
+									<a href="https://facebook.com/mp3vibesdotnet"><i  class="fa fa-facebook fa-2x mx-3 "></i></a>
+									<a href="https://twitter.com/awesome206"><i  class="fa fa-twitter fa-2x mx-3 "></i></a>
+									<a href="https://instagram.com/mp3vibes_media"><i  class="fa fa-instagram fa-2x mx-3"></i></a>
+								
+
+								</div>
+						</div>
+					</div>
+				</div>
+			</div>
+</body>
+<!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+
+</html>
